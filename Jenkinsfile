@@ -4,7 +4,6 @@ pipeline {
         stage('build') {
             steps {
                 echo 'python --version'
-                python main.py
             }
         }
     }
