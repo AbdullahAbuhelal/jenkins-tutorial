@@ -17,7 +17,16 @@ pipeline {
                 '''
             }
         }
-        stage('Test') {
+        stage('Test'){
+            steps{
+                script{
+                    sh 'cd jenkins_django'
+                    sh 'pip install pytest==7.4.2'
+                    sh 'pytest'
+                }
+            }
+       }
+        stage('Start app') {
             steps {
                 echo "Testing.."
                 sh '''
