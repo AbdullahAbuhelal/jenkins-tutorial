@@ -22,7 +22,7 @@ pipeline {
                 script{
                     sh 'cd jenkins_django'
                     sh '''
-                    python venv venv
+                    python3 venv venv
                     source venv/bin/activate
                     '''
                     sh 'pip install pytest==7.4.2'
