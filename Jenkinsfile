@@ -21,9 +21,8 @@ pipeline {
             steps{
                 script{
                     sh 'cd jenkins_django'
-                    sh 'pip install pytest==7.4.2'
                     sh 'pip list'
-                    sh 'py.test'
+                    sh 'pytest'
                 }
             }
        }
