@@ -12,27 +12,16 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                cd myapp
                 pip install -r requirements.txt
                 '''
             }
         }
-        stage('Test'){
-            steps{
-                script{
-                    sh 'cd jenkins_django'
-                    sh 'pip list'
-                    sh 'pytest'
-                }
-            }
-       }
-        stage('Start app') {
+        stage('Testing') {
             steps {
                 echo "Testing.."
                 sh '''
-                cd myapp
-                python3 hello.py
-                python3 hello.py --name=Abdullah
+                cd jenkins_djnago
+                pytest
                 '''
             }
         }
