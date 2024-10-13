@@ -18,6 +18,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 cd jenkins_django
+                pip3 list
                 pytest
                 '''
             }
