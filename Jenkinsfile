@@ -31,4 +31,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            junit 'jenkins_jango/reports/results.xml'
+        }
+    }
 }
