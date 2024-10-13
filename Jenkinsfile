@@ -19,7 +19,7 @@ pipeline {
                 sh '''
                 cd jenkins_django
                 pip3 list
-                pytest
+                python3 -m pytest
                 '''
             }
         }
