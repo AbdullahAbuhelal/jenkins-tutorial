@@ -33,7 +33,7 @@ pipeline {
     }
     post {
         always {
-            junit 'jenkins_jango/reports/results.xml'
+            junit '/home/jenkins/workspace/my_first_pipeline/jenkins_django/reports/results.xml'
         }
     }
 }
