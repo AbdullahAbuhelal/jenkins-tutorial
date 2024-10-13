@@ -18,7 +18,7 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 cd jenkins_django
-                python3 manage.py runserver
+                pytest
                 '''
             }
         }
